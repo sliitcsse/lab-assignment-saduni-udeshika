@@ -3,7 +3,7 @@ import "../auth.css";
 
 export default function SignUp({ handleSignUp, handleSignInClick }) {
   return (
-    <div>
+    <div className="form">
       <div className="header">Sign Up</div>
       <label>First name:</label>
       <input type="text" placeholder="John" />
@@ -13,6 +13,12 @@ export default function SignUp({ handleSignUp, handleSignInClick }) {
       <br />
       <label>Email:</label>
       <input type="text" placeholder="Doe" />
+      <br />
+      <label>Type:</label>
+      <select>
+        <option value="customer">Customer</option>
+        <option value="trader">Trader</option>
+      </select>
       <br />
       <br />
       <button onClick={handleSignUp}>Sign Up</button>

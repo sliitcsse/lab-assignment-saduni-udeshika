@@ -4,6 +4,8 @@ import products from "../../constants/products";
 import "./home.css";
 
 export default function Home({ handleAddToCart }) {
+  const addToWishList = async () => {};
+
   return (
     <div>
       <div className="header">Products</div>
@@ -12,7 +14,10 @@ export default function Home({ handleAddToCart }) {
           <Card
             itemData={item}
             key={item.id}
-            handleAddToCart={handleAddToCart}
+            onClick={() => handleAddToCart(item)}
+            buttonLabel="Add To Cart"
+            onSecondaryButtonClick={addToWishList}
+            secondaryButtonLabel="Add To Wishlist"
           />
         ))}
       </div>
