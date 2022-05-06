@@ -2,8 +2,8 @@ const customers = new Map();
 import {randomBytes} from 'crypto';
 
 //Add customers
-export const save = ({userName, password,UserType}) =>{
-    const customer = {id: randomBytes(16).toString('hex'), userName, password, UserType, postDate: new Date()};
+export const save = ({firstName, lastName, email, userType}) =>{
+    const customer = {id: randomBytes(16).toString('hex'), firstName, lastName, email, userType, postDate: new Date()};
     customers.set(customer.id, customer);
     return customer;
 };
