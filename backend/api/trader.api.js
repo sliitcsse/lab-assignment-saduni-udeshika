@@ -1,8 +1,8 @@
 const traders = new Map();
 import {randomBytes} from 'crypto';
 
-export const save = ({userName, password}) => {
-  const trader = {id: randomBytes(16).toString('hex'), userName, password, postDate: new Date()};
+export const save = ({userName, password, UserType}) => {
+  const trader = {id: randomBytes(16).toString('hex'), userName, password, UserType, postDate: new Date()};
   traders.set(trader.id, trader);
   return trader;
 };
